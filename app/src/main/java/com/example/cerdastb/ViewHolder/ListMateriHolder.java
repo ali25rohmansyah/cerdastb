@@ -3,6 +3,7 @@ package com.example.cerdastb.ViewHolder;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,6 +14,7 @@ public class ListMateriHolder  extends RecyclerView.ViewHolder implements View.O
 
     public TextView TxtJudul;
     public LinearLayout BackColor;
+    public ImageView imageView;
 
     private ItemClickListener itemClickListener;
 
@@ -22,7 +24,7 @@ public class ListMateriHolder  extends RecyclerView.ViewHolder implements View.O
 
         TxtJudul = itemView.findViewById(R.id.Judul_Cview);
         BackColor = itemView.findViewById(R.id.backColor);
-
+        imageView = itemView.findViewById(R.id.image_Cview);
         itemView.setOnClickListener(this);
     }
 
