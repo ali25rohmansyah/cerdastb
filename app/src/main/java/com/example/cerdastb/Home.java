@@ -160,7 +160,7 @@ public class Home extends AppCompatActivity
             ft.commit();
 
 
-        }else if (id == R.id.about) {
+        } else if (id == R.id.about) {
             About fragment = new About();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.frameLayout, fragment);

@@ -26,6 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.Collections;
 
@@ -91,6 +92,9 @@ public class ListMateriFragment extends Fragment {
 
 
                 viewHolder.TxtJudul.setText(model.getJudul());
+                Picasso.get().load(model.getImage()).into(viewHolder.imageView);
+
+
                 final MateriModel clickItem = model;
                 final Intent intent1 = new Intent(ListMateriFragment.this.getActivity(),HalamanMateri.class);
                 final Intent intent2 = new Intent(ListMateriFragment.this.getActivity(),WebMainActivity.class);

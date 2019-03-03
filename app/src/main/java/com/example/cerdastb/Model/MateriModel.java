@@ -1,14 +1,15 @@
 package com.example.cerdastb.Model;
 
 public class MateriModel {
-    private String Judul,materi,type;
+    private String Judul,image,materi,type;
 
     public MateriModel() {
 
     }
 
-    public MateriModel(String judul, String materi, String type) {
+    public MateriModel(String judul, String image, String materi, String type) {
         Judul = judul;
+        this.image = image;
         this.materi = materi;
         this.type = type;
     }
@@ -19,6 +20,14 @@ public class MateriModel {
 
     public void setJudul(String judul) {
         Judul = judul;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getMateri() {
