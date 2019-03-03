@@ -104,7 +104,8 @@ public class ListMateriFragment extends Fragment {
                             startActivity(intent1);
 
                         }
-                        else if(clickItem.getType().equals("video")){
+                        else if(clickItem.getType().equals("video")||clickItem.getType().equals("web")){
+                            intent2.putExtra("materiID",adapter.getRef(position).getKey());
                             startActivity(intent2);
                         }
                     }
