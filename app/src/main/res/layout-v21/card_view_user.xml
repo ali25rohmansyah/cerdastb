@@ -20,7 +20,7 @@
             android:id="@+id/gambar_user"
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:background="#2d2d2d"
+            android:background="#2d2d2d"git
             android:scaleType="centerCrop" />
 
         <TextView

@@ -158,9 +158,7 @@ public class Home extends AppCompatActivity
             ft.replace(R.id.frameLayout, fragment);
             ft.commit();
 
-        } else if (id == R.id.biodata) {
-            Toast.makeText(this, "Maaf Fitur ini belum tersedia", Toast.LENGTH_SHORT).show();
-        }else if (id == R.id.about) {
+        } else if (id == R.id.about) {
             About fragment = new About();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.frameLayout, fragment);
