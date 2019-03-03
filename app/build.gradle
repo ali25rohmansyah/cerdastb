@@ -54,7 +54,7 @@ dependencies {
 
     implementation 'com.applandeo:material-calendar-view:1.5.1'
     implementation 'io.paperdb:paperdb:2.1'
-
+    implementation 'me.biubiubiu.justifytext:library:1.1'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.github.jakebonk:NotifyMe:1.0.0'
     implementation 'com.wdullaer:materialdatetimepicker:3.6.0'

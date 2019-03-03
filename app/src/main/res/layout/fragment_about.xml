@@ -88,11 +88,15 @@
                 android:fontFamily="@font/nunito_bold"
                 android:text="Tentang Aplikasi Cerdas TB" />
 
-            <TextView
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
                 android:id="@+id/txt_data_pengembang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
+                android:textAlignment="gravity"
+                android:gravity="fill_horizontal"
                 android:textColor="@color/solidGrey"
                 android:fontFamily="@font/nunito_regular"
                 android:text="@string/about"
