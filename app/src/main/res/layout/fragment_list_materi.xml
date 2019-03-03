@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="650dp">
         <android.support.v7.widget.RecyclerView
             android:id="@+id/Recycle_materi"
             android:layout_width="match_parent"
@@ -23,9 +23,10 @@
 
     <Button
         android:id="@+id/btn_posttest"
-        android:text="Post Test"
+        android:text="Ayo Post Test"
         android:layout_above="@id/progressBar"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:background="@drawable/ripple_effect_red"
         android:textColor="@color/white"
