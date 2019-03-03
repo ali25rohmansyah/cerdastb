@@ -3,35 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/beranda"
-            android:icon="@drawable/beranda"
+            android:icon="@drawable/ic_home"
             android:title="Beranda" />
         <item
             android:id="@+id/adminaja"
             android:title="Halaman Admin"
-            android:icon="@drawable/admin"/>
+            android:icon="@drawable/ic_admin"/>
         <item
             android:id="@+id/buku"
-            android:icon="@drawable/bukusaku"
+            android:icon="@drawable/ic_book"
             android:title="Buku Saku" />
         <item
             android:id="@+id/alarm"
-            android:icon="@drawable/alarm"
+            android:icon="@drawable/ic_alarmm"
             android:title="Set Alarm" />
         <item
             android:id="@+id/kalender"
-            android:icon="@drawable/kalender"
+            android:icon="@drawable/ic_calendar"
             android:title="Kalender" />
         <item
-            android:id="@+id/biodata"
-            android:icon="@drawable/person"
-            android:title="Biodata" />
-        <item
             android:id="@+id/about"
-            android:icon="@drawable/person"
-            android:title="About" />
+            android:icon="@drawable/ic_help"
+            android:title="Tentang Kami" />
     </group>
 
 </menu>

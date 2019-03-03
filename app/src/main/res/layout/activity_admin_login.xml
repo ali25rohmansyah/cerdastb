@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/gambar_admin"
-        android:src="@drawable/ic_admin"
+        android:src="@drawable/ic_adminn"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:layout_marginTop="30dp"

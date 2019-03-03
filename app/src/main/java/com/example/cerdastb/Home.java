@@ -57,6 +57,7 @@ public class Home extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
 
         View headerView = navigationView.getHeaderView(0);
         Paper.init(this);
@@ -158,8 +159,7 @@ public class Home extends AppCompatActivity
             ft.replace(R.id.frameLayout, fragment);
             ft.commit();
 
-        } else if (id == R.id.biodata) {
-            Toast.makeText(this, "Maaf Fitur ini belum tersedia", Toast.LENGTH_SHORT).show();
+
         }else if (id == R.id.about) {
             About fragment = new About();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
