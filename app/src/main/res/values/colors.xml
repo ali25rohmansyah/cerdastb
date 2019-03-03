@@ -6,13 +6,13 @@
     <color name="white">#FFFFFF</color>
     <color name="Transparentwhite">#E9EEEEEE</color>
     <color name="hint">#F0A29D9D</color>
-    <color name="yellow">#fecf39</color>
+    <color name="yellow">#FFDA64</color>
     <color name="red">#E03E57</color>
     <color name="solidRed">#C72E46</color>
     <color name="grey">#494949</color>
     <color name="solidGrey">#3e3e3e</color>
     <color name="skyblue">#aed8ff</color>
-    <color name="blue">#6596ff</color>
+    <color name="blue">#4A64BE</color>
     <color name="view">#F0E0E0E0</color>
     <color name="bg_splash">#F0FFFFFF</color>
 

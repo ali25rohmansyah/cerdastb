@@ -1,17 +1,25 @@
 package com.example.cerdastb;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class UserDetail extends AppCompatActivity {
 
     private TextView tvNama, tvPretest, tvPosttest, tvJkel, tvJTB, tvNoHp, tvTgl, tvTgl2, tvKota,
             tvstatus, tvKunjung;
     private ImageView img;
-
+    DatabaseReference table_user = FirebaseDatabase.getInstance().getReference("User");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +32,8 @@ public class UserDetail extends AppCompatActivity {
         tgl = intent.getExtras().getString("tanggalLahir");
         tgl2 = intent.getExtras().getString("tanggalDiagnosa");
         kota = intent.getExtras().getString("kota");
+
+        TypedArray avatarImg = getResources().obtainTypedArray(R.array.genderImg);
 
         String NoHp = intent.getExtras().getString("NoHandphone");
         String Pretest = intent.getExtras().getString("Pretest");
@@ -55,6 +65,12 @@ public class UserDetail extends AppCompatActivity {
         tvKota.setText(": "+kota);
         tvstatus.setText(": "+status);
         tvKunjung.setText(": "+kunjung);
-        img.setImageResource(R.drawable.ic_male);
+
+       if (jkel.equals("Pria")){
+           img.setImageResource(avatarImg.getResourceId(0,-1));
+       }else{
+           img.setImageResource(avatarImg.getResourceId(1,-1));
+       }
+
     }
 }
