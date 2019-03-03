@@ -24,10 +24,7 @@
             android:id="@+id/kalender"
             android:icon="@drawable/kalender"
             android:title="Kalender" />
-        <item
-            android:id="@+id/biodata"
-            android:icon="@drawable/person"
-            android:title="Biodata" />
+
         <item
             android:id="@+id/about"
             android:icon="@drawable/person"
