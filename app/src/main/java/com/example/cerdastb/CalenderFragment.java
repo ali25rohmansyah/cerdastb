@@ -143,7 +143,7 @@ public class CalenderFragment extends Fragment {
                     txt_kunjunganDokter.setText("Atur tanggal kunjungan dokter");
                 }else{
                     img_kunjunganDokter.setImageResource(R.drawable.checked);
-                    txt_kunjunganDokter.setText("Anda Mempunya Jadwal pada tanggal "+user.getKunjunganDokter());
+                    txt_kunjunganDokter.setText("Anda Mempunyai Jadwal pada tanggal "+user.getKunjunganDokter());
 
                 }
             }
