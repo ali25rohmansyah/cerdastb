@@ -118,6 +118,7 @@ public class CalenderFragment extends Fragment {
                             .large_icon(R.drawable.medicine)
                             .build();
 
+
                     img_minumObat.setImageResource(R.drawable.medicine);
                     txt_minumObat.setText("Anda belum minum obat");
                 }

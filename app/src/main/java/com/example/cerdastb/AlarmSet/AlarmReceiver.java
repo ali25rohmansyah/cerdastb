@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.example.cerdastb.Alarm;
+import com.example.cerdastb.Home;
 
 public class AlarmReceiver extends BroadcastReceiver {
 
@@ -26,8 +27,8 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         Log.d(TAG, "onReceive: ");
 
-        NotificationScheduler.showNotification(context, Alarm.class,
-                "Minum obat", "Sudah?");
+        NotificationScheduler.showNotification(context, Home.class,
+                "Minum obat", "Ayo Minum Obat");
 
     }
 }

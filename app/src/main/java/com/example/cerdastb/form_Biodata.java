@@ -41,7 +41,7 @@ public class form_Biodata extends AppCompatActivity {
     Button btn_start;
     private SimpleDateFormat dateFormatter;
     DatePickerDialog datePickerDialog;
-    int pYear,  pMonth, pDay;
+    int pYear,  pMonth, pDay,valid;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     @Override
@@ -79,12 +79,34 @@ public class form_Biodata extends AppCompatActivity {
                     Toast.makeText(form_Biodata.this, "Field tidak boleh kosong", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    String pasien = nama;
-                    Users users = new Users(jenisTB, gender,edt_kota.getText().toString(),"00-00-0000","00-00-0000", pasien, "+62"+nomorHP.getText().toString(), "0", "0","00-00-0000", edt_tgllahir.getText().toString());
-                    table_users.child("+62"+nomorHP.getText().toString()).setValue(users);
-                    users.setNoHandphone("+62"+nomorHP.getText().toString());
-                    Common.currentUser = users;
-                    showDialog();
+
+                    table_users.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.child("+62"+nomorHP.getText().toString()).exists()){ valid = 1;
+                            }
+                            else{
+                                String pasien = nama;
+                                Users users = new Users(jenisTB, gender,edt_kota.getText().toString(),"00-00-0000","00-00-0000", pasien, "+62"+nomorHP.getText().toString(), "0", "0","00-00-0000", edt_tgllahir.getText().toString());
+                                table_users.child("+62"+nomorHP.getText().toString()).setValue(users);
+                                users.setNoHandphone("+62"+nomorHP.getText().toString());
+                                Common.currentUser = users;
+                                showDialog();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+
+                    if (valid==1){
+                        Toast.makeText(form_Biodata.this, "Nomor Handphone sudah terpakai", Toast.LENGTH_SHORT).show();
+                        valid = 0;
+                    }
+
                 }
 
             }
